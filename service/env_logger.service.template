@@ -1,0 +1,20 @@
+[Unit]
+Description=Environmental Logger Service
+After=network.target
+
+[Service]
+# プロジェクトルートとユーザーを動的に設定
+WorkingDirectory={{PROJECT_ROOT}}
+ExecStart={{PROJECT_ROOT}}/venv/bin/python main.py
+User={{USER_NAME}}
+
+# プログラムの安定稼働設定
+Restart=always
+RestartSec=5
+
+# ログ出力先
+StandardOutput=append:{{PROJECT_ROOT}}/logs/service.log
+StandardError=append:{{PROJECT_ROOT}}/logs/service.error.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,20 @@
+{
+    "sensor": {
+        "bus_number": 1,
+        "i2c_address": 118,
+        "interval_sec": 60
+    },
+    "lcd": {
+        "enabled": false,
+        "bus_number": 1,
+        "i2c_address": 62
+    },
+    "gpio": {
+        "start": 22,
+        "stop": 23
+    },
+    "web": {
+        "host": "0.0.0.0",
+        "port": 5000
+    }
+}

@@ -1,0 +1,10 @@
+# .pre-commit-config.yaml
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v5.0.0  # 最新のバージョンを指定
+  hooks:
+    - id: trailing-whitespace       # 行末の不要な空白を削除
+    - id: end-of-file-fixer        # ファイル末尾に改行を入れる
+    - id: check-yaml               # YAMLファイルの文法チェック
+    - id: check-added-large-files  # 大容量ファイルが誤って追加されるのを防ぐ
+    - id: detect-private-key       # 秘密鍵が誤ってコミットされるのを防ぐ
